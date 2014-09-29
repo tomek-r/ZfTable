@@ -71,13 +71,12 @@ class Render extends AbstractCommon
     public function renderNewDataTableJson()
     {
 
-        $render = $this->getTable
-        ()->getRow()->renderRows('array');
+        $render = $this->getTable()->getRow()->renderRows('array');
         
         $res = array(
           	'draw' => $render,
-            'recordsFiltered' => $this->getTable()->getSource()->getPaginator()->getTotalItemCount();
-            'data' => $render;
+            'recordsFiltered' => $this->getTable()->getSource()->getPaginator()->getTotalItemCount(),
+            'data' => $render
         );
             
         
